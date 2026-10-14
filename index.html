@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal Layanan Akademik untuk memudahkan mahasiswa mengajukan layanan kampus.">
+  <title>EduServe — Portal Layanan Akademik</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#beranda" aria-label="EduServe, beranda">
+        <span class="brand-mark" aria-hidden="true">E</span>
+        <span><strong>EduServe</strong><small>Portal Akademik</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">
+        <span class="sr-only">Buka navigasi</span><span aria-hidden="true">☰</span>
+      </button>
+      <nav id="mainNav" aria-label="Navigasi utama">
+        <a class="nav-link active" href="#beranda">Beranda</a>
+        <a class="nav-link" href="#layanan">Layanan</a>
+        <a class="nav-link" href="#alur">Cara Pengajuan</a>
+        <a class="nav-link" href="#permohonan">Ajukan Permohonan</a>
+      </nav>
+      <a class="nav-cta" href="#permohonan">Ajukan layanan <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="konten">
+    <section class="hero" id="beranda">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> LAYANAN MAHASISWA DALAM SATU PORTAL</div>
+          <h1>Urus kebutuhan akademik, <span>lebih mudah.</span></h1>
+          <p class="hero-text">Ajukan surat, minta dokumen akademik, dan temukan layanan kampus dari satu tempat yang praktis.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#layanan">Jelajahi layanan <span aria-hidden="true">→</span></a>
+            <a class="button button-quiet" href="#alur">Lihat cara pengajuan</a>
+          </div>
+          <div class="hero-note"><span class="check-icon" aria-hidden="true">✓</span> Praktis, transparan, dan mudah diakses</div>
+        </div>
+        <div class="hero-visual" aria-label="Ilustrasi portal akademik">
+          <div class="visual-glow"></div>
+          <div class="dashboard-card">
+            <div class="dash-top"><div><span class="dash-kicker">RINGKASAN LAYANAN</span><h2>Halo, Mahasiswa!</h2></div><div class="avatar" aria-hidden="true">M</div></div>
+            <p class="dash-sub">Apa yang ingin kamu urus hari ini?</p>
+            <div class="dash-service"><span class="service-icon teal" aria-hidden="true">▤</span><span><strong>Surat Aktif Kuliah</strong><small>Dokumen akademik</small></span><span class="arrow">↗</span></div>
+            <div class="dash-service"><span class="service-icon purple" aria-hidden="true">▥</span><span><strong>Transkrip Nilai</strong><small>Riwayat hasil studi</small></span><span class="arrow">↗</span></div>
+            <div class="dash-service"><span class="service-icon orange" aria-hidden="true">✓</span><span><strong>Legalisir Dokumen</strong><small>Validasi dokumen</small></span><span class="arrow">↗</span></div>
+            <div class="dash-footer"><span class="pulse"></span> Layanan tersedia secara online</div>
+          </div>
+          <div class="floating-note"><span class="floating-check" aria-hidden="true">✓</span><span><strong>Alur jelas</strong><small>Ikuti status permohonan</small></span></div>
+          <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats container" aria-label="Keunggulan portal">
+      <div class="stat-item"><span class="stat-icon" aria-hidden="true">◷</span><div><strong>Hemat waktu</strong><small>Informasi layanan dalam satu tempat</small></div></div>
+      <div class="stat-item"><span class="stat-icon" aria-hidden="true">◎</span><div><strong>Alur terarah</strong><small>Ketahui langkah pengajuan</small></div></div>
+      <div class="stat-item"><span class="stat-icon" aria-hidden="true">♧</span><div><strong>Mudah diakses</strong><small>Nyaman di HP dan komputer</small></div></div>
+    </section>
+
+    <section class="section container" id="layanan">
+      <div class="section-heading">
+        <div><span class="section-label">PILIH KEBUTUHANMU</span><h2>Layanan akademik</h2><p>Temukan layanan yang sesuai dengan keperluan kuliahmu.</p></div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Cari layanan</span><input id="serviceSearch" type="search" placeholder="Cari layanan..." autocomplete="off"></label>
+      </div>
+      <div class="filter-row" role="group" aria-label="Filter kategori layanan">
+        <button class="filter-chip selected" data-filter="semua" aria-pressed="true">Semua layanan</button>
+        <button class="filter-chip" data-filter="surat" aria-pressed="false">Surat akademik</button>
+        <button class="filter-chip" data-filter="nilai" aria-pressed="false">Nilai & studi</button>
+        <button class="filter-chip" data-filter="administrasi" aria-pressed="false">Administrasi</button>
+      </div>
+      <div class="service-grid" id="serviceGrid">
+        <article class="service-card" data-category="surat" data-search="surat aktif kuliah keterangan mahasiswa aktif">
+          <div class="card-top"><span class="card-icon icon-teal" aria-hidden="true">▤</span><span class="card-tag">Surat akademik</span></div>
+          <h3>Surat Aktif Kuliah</h3><p>Untuk keperluan beasiswa, tunjangan, atau administrasi lainnya.</p>
+          <div class="card-bottom"><span class="meta"><span aria-hidden="true">◷</span> Estimasi 2–3 hari kerja</span><a href="#permohonan" class="text-link" data-service="Surat Aktif Kuliah">Ajukan <span aria-hidden="true">→</span></a></div>
+        </article>
+        <article class="service-card" data-category="nilai" data-search="transkrip nilai hasil studi akademik">
+          <div class="card-top"><span class="card-icon icon-purple" aria-hidden="true">▥</span><span class="card-tag">Nilai & studi</span></div>
+          <h3>Transkrip Nilai</h3><p>Permohonan dokumen ringkasan hasil studi sesuai ketentuan kampus.</p>
+          <div class="card-bottom"><span class="meta"><span aria-hidden="true">◷</span> Estimasi 3–5 hari kerja</span><a href="#permohonan" class="text-link" data-service="Transkrip Nilai">Ajukan <span aria-hidden="true">→</span></a></div>
+        </article>
+        <article class="service-card" data-category="administrasi" data-search="legalisir ijazah dokumen cap pengesahan">
+          <div class="card-top"><span class="card-icon icon-orange" aria-hidden="true">✓</span><span class="card-tag">Administrasi</span></div>
+          <h3>Legalisir Dokumen</h3><p>Informasi pengajuan legalisir dokumen akademik sesuai prosedur.</p>
+          <div class="card-bottom"><span class="meta"><span aria-hidden="true">◷</span> Estimasi 3–5 hari kerja</span><a href="#permohonan" class="text-link" data-service="Legalisir Dokumen">Ajukan <span aria-hidden="true">→</span></a></div>
+        </article>
+        <article class="service-card" data-category="surat" data-search="surat rekomendasi akademik dosen">
+          <div class="card-top"><span class="card-icon icon-blue" aria-hidden="true">✉</span><span class="card-tag">Surat akademik</span></div>
+          <h3>Surat Rekomendasi</h3><p>Ajukan informasi dan permohonan surat rekomendasi akademik.</p>
+          <div class="card-bottom"><span class="meta"><span aria-hidden="true">◷</span> Sesuai persetujuan</span><a href="#permohonan" class="text-link" data-service="Surat Rekomendasi">Ajukan <span aria-hidden="true">→</span></a></div>
+        </article>
+        <article class="service-card" data-category="nilai" data-search="konsultasi kartu rencana studi krs akademik">
+          <div class="card-top"><span class="card-icon icon-pink" aria-hidden="true">▣</span><span class="card-tag">Nilai & studi</span></div>
+          <h3>Konsultasi KRS</h3><p>Dapatkan arahan mengenai Kartu Rencana Studi dan rencana semester.</p>
+          <div class="card-bottom"><span class="meta"><span aria-hidden="true">◷</span> Sesuai jadwal akademik</span><a href="#permohonan" class="text-link" data-service="Konsultasi KRS">Ajukan <span aria-hidden="true">→</span></a></div>
+        </article>
+        <article class="service-card" data-category="administrasi" data-search="perubahan data mahasiswa administrasi">
+          <div class="card-top"><span class="card-icon icon-green" aria-hidden="true">⚙</span><span class="card-tag">Administrasi</span></div>
+          <h3>Perubahan Data Mahasiswa</h3><p>Informasi pembaruan data diri dengan dokumen pendukung yang sesuai.</p>
+          <div class="card-bottom"><span class="meta"><span aria-hidden="true">◷</span> Sesuai verifikasi</span><a href="#permohonan" class="text-link" data-service="Perubahan Data Mahasiswa">Ajukan <span aria-hidden="true">→</span></a></div>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState" hidden>Tidak ada layanan yang cocok. Coba kata kunci atau kategori lain.</p>
+    </section>
+
+    <section class="process-section" id="alur">
+      <div class="container">
+        <div class="section-heading centered"><div><span class="section-label">TIGA LANGKAH MUDAH</span><h2>Cara mengajukan layanan</h2><p>Ikuti langkah berikut untuk memulai permohonan.</p></div></div>
+        <div class="steps">
+          <article class="step"><span class="step-number">01</span><div class="step-icon" aria-hidden="true">⌕</div><h3>Pilih layanan</h3><p>Temukan layanan yang sesuai dengan kebutuhan akademikmu.</p></article>
+          <article class="step"><span class="step-number">02</span><div class="step-icon" aria-hidden="true">▤</div><h3>Isi formulir</h3><p>Lengkapi identitas dan informasi permohonan dengan benar.</p></article>
+          <article class="step"><span class="step-number">03</span><div class="step-icon" aria-hidden="true">✓</div><h3>Tunggu verifikasi</h3><p>Petugas akademik akan memeriksa permohonan sesuai prosedur kampus.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container request-section" id="permohonan">
+      <div class="request-intro"><span class="section-label">MULAI DI SINI</span><h2>Formulir permohonan</h2><p>Isi data dengan benar agar permohonan dapat ditinjau oleh petugas akademik.</p><div class="help-card"><span aria-hidden="true">ⓘ</span><p>Siapkan data mahasiswa dan dokumen pendukung jika diperlukan. Jangan masukkan kata sandi atau informasi rahasia.</p></div></div>
+      <form id="requestForm" class="request-form">
+        <div class="form-heading"><h3>Data pemohon</h3><p>Kolom bertanda <span aria-hidden="true">*</span> wajib diisi.</p></div>
+        <div class="form-grid">
+          <div class="field"><label for="fullName">Nama lengkap <span>*</span></label><input id="fullName" name="nama" autocomplete="name" required placeholder="Masukkan nama lengkap"></div>
+          <div class="field"><label for="nim">Nomor Induk Mahasiswa (NIM) <span>*</span></label><input id="nim" name="nim" required inputmode="numeric" placeholder="Masukkan NIM"></div>
+          <div class="field"><label for="email">Email aktif <span>*</span></label><input id="email" name="email" type="email" autocomplete="email" required placeholder="nama@email.com"></div>
+          <div class="field"><label for="faculty">Program studi / fakultas <span>*</span></label><input id="faculty" name="prodi" required placeholder="Masukkan program studi"></div>
+          <div class="field full"><label for="serviceType">Jenis layanan <span>*</span></label><select id="serviceType" name="layanan" required><option value="">Pilih jenis layanan</option><option>Surat Aktif Kuliah</option><option>Transkrip Nilai</option><option>Legalisir Dokumen</option><option>Surat Rekomendasi</option><option>Konsultasi KRS</option><option>Perubahan Data Mahasiswa</option></select></div>
+          <div class="field full"><label for="details">Keterangan permohonan <span>*</span></label><textarea id="details" name="keterangan" rows="4" required placeholder="Jelaskan tujuan permohonan secara singkat"></textarea></div>
+        </div>
+        <label class="consent"><input type="checkbox" id="confirmData" required><span>Saya memastikan data yang diisi benar dan dapat digunakan untuk meninjau permohonan ini.</span></label>
+        <button class="button button-primary submit-button" type="submit">Kirim permohonan <span aria-hidden="true">→</span></button>
+        <p class="form-note">Demo antarmuka: data tidak dikirim ke server atau disimpan secara permanen.</p>
+        <div class="form-message" id="formMessage" role="status" aria-live="polite" hidden></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="#beranda"><span class="brand-mark" aria-hidden="true">E</span><span><strong>EduServe</strong><small>Portal Akademik</small></span></a>
+      <p>Memudahkan akses layanan akademik, satu langkah setiap saat.</p>
+      <div class="footer-links"><a href="#layanan">Layanan</a><a href="#alur">Cara Pengajuan</a><a href="#permohonan">Permohonan</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 EduServe · Proyek demonstrasi</span><span>Informasi layanan mengikuti kebijakan kampus masing-masing.</span></div>
+  </footer>
+</body>
+</html>
